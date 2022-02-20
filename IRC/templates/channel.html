@@ -1,0 +1,15 @@
+{% extends './main.html' %}
+
+{% block content %}
+    <h1>{{ channel.name }}</h1>
+
+    {% for message in messages %}
+    
+    @{{message.user_id}}
+    {{ message.message }}
+    <hr/>
+
+    
+    {% endfor %}
+
+{% endblock content %}

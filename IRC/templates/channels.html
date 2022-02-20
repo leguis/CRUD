@@ -1,0 +1,12 @@
+{% extends './main.html' %}
+
+{% block content %}
+    <h1>Channel</h1>
+    <hr/>
+    {% for channel in channels %}
+    
+        <h3>{{ channel.id }} -- <a href="{% url 'channel' channel.id %}">{{ channel.name }}</a></h3>
+        <hr/>
+
+    {% endfor %}
+{% endblock content %}
